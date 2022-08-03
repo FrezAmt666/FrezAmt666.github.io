@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let secretNo = 64 ;
+        let guess = prompt('Guess the correct number');
+        console.log(guess);
+        while(secretNo != guess){
+            if(guess > secretNo){
+                alert('Higher ,  try again');
+                
+            }else{
+                alert('Lower , try again');
+            }
+            guess = prompt('Guess a the correct number');
+        }
+        alert('Correct!');
+    </script>
+</body>
+</html>
