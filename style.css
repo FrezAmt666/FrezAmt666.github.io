@@ -1,19 +1,22 @@
 *{
     padding: 0;
     margin: 0;
-
-    
+ 
 }
+
 .cover{
-    background-color: rgb(34, 32, 32);
+    /* background-color: rgb(34, 32, 32); */
     width: 100%;
     height: auto;
     color: aliceblue;
     margin: auto;
+    color:rgb(255, 255, 255);
+    background:  rgb(114, 115, 115);
 }
 
 .intro{
     margin: auto;
+    
 
 }
 .profile{
@@ -27,7 +30,25 @@
     margin: auto;
 }
 .service{
-    background-color: rgb(101, 100, 100);
+    background-color: rgb(114, 115, 115);
     width: 100%;
     height: auto;
+    /* background: linear-gradient(to bottom, #3333cc 0%, #ccffff 100%); */
 }
+
+.contact{
+    background-color: rgb(114, 115, 115);
+    width: 100%;
+    height: auto;
+    color: rgb(255, 255, 255);
+
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* .c{
+    width: 400px;
+    background-color: bisque;
+} */
