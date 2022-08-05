@@ -33,6 +33,7 @@
     background-color: rgb(114, 115, 115);
     width: 100%;
     height: auto;
+    margin: auto;
     /* background: linear-gradient(to bottom, #3333cc 0%, #ccffff 100%); */
 }
 
