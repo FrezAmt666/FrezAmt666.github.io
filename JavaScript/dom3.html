@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">CSS Manipulation with DOM</h1>
+    <button onclick="action()">Action</button>
+    <br><br>
+    <img src="https://static.vecteezy.com/system/resources/previews/003/549/556/original/space-galaxy-background-free-vector.jpg" alt="" id="img" width="200" height="200">
+    <br><br>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG49sJqWNA1aaA9isdqNJzCriDL4zx_nRrnVW1uNFVK0_TF5IHE1qyJnFUkTsU5FjypMI&usqp=CAU" id="image" alt="" width="500" height="250" onmouseover="big()" onmouseout="normal()"> 
+
+    <script>
+        function action(){
+            // alert{'hello'};
+            let heading = document.querySelector('#heading');
+            heading.style.color = 'red';
+            heading.style.backgroundColor = 'black';
+
+            let img = document.querySelector('#img');
+            img.style.width = '500px';
+            img.style.heading = '500px';
+        }
+
+        let image = document.querySelector('#image');
+        function big(){
+            image.style.width = '700px';
+            image.style.height = '400px';
+        }
+
+        function normal(){
+            image.style.width = '500px';
+            image.style.height = '250px';
+        }
+    </script>
+</body>
+</html>
