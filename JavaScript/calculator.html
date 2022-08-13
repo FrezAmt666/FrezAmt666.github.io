@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            border-color: red;
+        }
+
+        small{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="">
+        <label for="num1">Number One</label>
+        <input type="number" name="num1" id="num1">
+        <small id="num1_err"></small>
+        <br><br>
+        <label for="num2">Number Two</label>
+        <input type="number" name="num2" id="num2">
+        <small id="num2_err"></small>
+        <br><br>
+        <label for="result">Result</label>
+        <input type="number" name="result" id="result" readonly>
+        <br><br>
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="sub()">Sub</button>
+    </form>
+    <script>
+        function formValidation(){
+            letnum1 = document.querySelector('#num1');
+            letnum2 = document.querySelector('num2');
+            
+            letnum1_err = document.querySelector('num1_err');
+            letnum2_err = document.querySelector('num2_err');
+
+            let number1 = num1.value;
+            let number2 = num2.value;
+
+            if (number1 === '' || number2 === ''){
+                num1_err.innerHTML = '';
+                num2_err.innerHTML = '';
+                num1.removeAttribute('class');
+                num2.removeAttribute('class');
+
+                if (number1 === ''){
+                    showError(num1_err, num1, 'Number One is Required!');
+                }
+
+                if (number2 === ''){
+                    showError(num2_err, num2, 'Number Two is Required!');
+                }
+
+                function showError(numError, numInput, message){
+                    numError.innerHTML = message;
+                    numInput.setAttribute('class','error');
+                }
+
+                }else{
+                    num1_err.innerHTML = '';
+                    num2_err.innerHTML = '';
+                    num1.removeAttribute('class');
+                    num2.removeAttribute('class');
+
+                    return {number1,number2};
+                }
+            }
+
+        function add(){
+            // alert('hello')
+            let numbers = formValidation();
+            console.log(numbers);
+            if(numbers){
+                let result =parseInt(numbers.number1) + parseInt(numbers.number2);
+            console.log(result);
+            document.querySelector('#result').value = result;
+            }
+            
+        }
+
+        function sub() {
+            let numbers = formValidation();
+            if(numbers){
+                let result =parseInt(numbers.number1) + parseInt(numbers.number2);
+            console.log(result);
+            document.querySelector('#result').value = result;
+            }
+            
+        }
+    </script>
+</body>
+</html>

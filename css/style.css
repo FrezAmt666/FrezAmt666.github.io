@@ -1,0 +1,16 @@
+h3{
+    color: darkcyan;
+    font-size: 50px;
+    text-align: center;
+}
+small{
+    color: royalblue;
+}
+
+p{
+    color: rgb(255, 0, 0);
+}      
+
+*{
+    color: red;
+}
