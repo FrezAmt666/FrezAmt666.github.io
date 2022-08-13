@@ -11,7 +11,7 @@
     color: aliceblue;
     margin: auto;
     color:rgb(255, 255, 255);
-    background:  rgb(114, 115, 115);
+    background: darkblue;
 }
 
 .intro{
@@ -42,6 +42,7 @@
     width: 100%;
     height: auto;
     color: rgb(255, 255, 255);
+    
 
 }
 a{
