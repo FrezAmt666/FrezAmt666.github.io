@@ -14,3 +14,69 @@ p{
 *{
     color: red;
 }
+
+
+h1{
+    text-align: center;
+}
+
+.borderone{
+    border: 10px dashed yellow;
+}
+
+.bordertwo{
+    border-top: 20px solid red;
+}
+
+.borderstyleone{
+    border-style: dotted;
+}
+
+.borderstylemix{
+    border-style: solid dashed dotted double;
+}
+
+.borderwidthone{
+    border-width: 1px 10px;
+    border-style: dashed;
+}
+
+.marginone{
+    margin: 100px 200px;
+    border: 1px solid black;
+}
+
+.margintwo{
+    margin-left: 50px;
+}
+
+.padding{
+    padding: 100px 40px 200px 10px;
+    border: 1px solid red;
+}
+
+.inline{
+    border: 1px solid black;
+    width: 200px;
+    display: inline-block;
+}
+
+.block{
+    border: 1px solid red;
+    width: 200px;
+    display: inline-block;
+}
+
+.float_left img{
+    width: 40%;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.float_right img{
+    width: 40%;
+    float: right;
+}
