@@ -80,3 +80,90 @@ h1{
     width: 40%;
     float: right;
 }
+
+.grid_one div,
+ .grid_two div,
+ .grid_three div,
+ .grid_four div,
+ .grid_five div,
+ .grid_six div{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.grid_one, 
+.grid_two,
+.grid_three,
+.grid_four,
+.grid_five,
+.grid_six{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    /* grid-template-rows: auto auto auto; */
+}
+
+.grid_two{
+    grid-column-gap: 40px;
+}
+
+.grid_three{
+    grid-row-gap: 50px;
+    
+}
+
+.grid_four{
+    grid-gap: 50px;
+}
+
+.grid_add{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.row_add{
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+
+.relative_parent{
+    width: 1000px;
+    height: 500px;
+    border: 1px solid red;
+}
+
+.relative{
+    width: 400px;
+    height: 200px;
+    border: 1px solid blue;
+    position: relative;
+    top: 50px;
+    left: 100px;
+
+}
+
+.absolute_parent{
+    width: 1000px;
+    height: 500px;
+    border: 1px solid green;
+}
+
+.absolute{
+    width: 300px;
+    height: 200px;
+    border: 1px solid  purple;
+    position: absolute;
+    top: 700px;
+    left: 400px;
+}
+
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}
+
+.font{
+    font-family: 'Silkscreen', cursive;
+}
