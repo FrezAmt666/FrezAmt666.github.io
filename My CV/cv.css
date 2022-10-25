@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap');
+.nav-item{
+    margin-right: 20px;
+}
+
+.home{
+    
+    width: 100%;
+    height: 700px;
+}
+
+.home img{
+    display: block;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.home h1,h3{
+    font-family: 'Lobster', cursive;
+}
+
+.social{
+    
+    margin: auto;
+    margin-top: 20px;
+}
+
+.social a{
+    margin: 10px;
+}
+.about{
+    font-family: 'Abril Fatface', cursive;
+}
+.line{
+    width: 130px;
+    color: black;
+    border: 3px solid white;
+    margin: auto;
+}
+
+.about p{
+    margin: 20px;
+}
+
+.skill img{
+    margin: 20px;
+}
