@@ -128,6 +128,35 @@
     transition-duration: .6s;
 }
 
+.hero{
+    background-color: black;
+}
+
+.hero img{
+    width: 70%;
+}
+
+.btn2{
+    background-color: black;
+    padding-bottom: 30px;
+    
+}
+
+.btn3{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    border: 3px solid rgb(245, 241, 241);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    width: 400px;
+    height: 70px;
+
+}
+
+.btn3:hover{
+    border: 3px solid  rgb(222, 64, 64);
+    border-radius: 10px;
+}
 
 .ember{
     background-color: black;
@@ -139,7 +168,7 @@
 
 .btn1{
     position: absolute;
-    top: 3100px;
+    top: 3860px;
     right: 65%;
     width: 400px;
     height: 70px;
