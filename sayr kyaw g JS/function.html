@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align=center>Function</h1>
+    <script>
+        function show(){
+            document.write(`<h2> This is function method </h2>`)
+        }
+        show();
+
+        function multi(num){
+            document.write(` This is multi function method result = ${2 ** num} <br>`);
+        }
+        multi(3)
+        multi(6)
+
+        function multi(num1=50 ,  num2 = 100){
+            document.write(` This is sum function method result = ${2 ** num} <br>`);
+        }
+        sum(1,2);
+        sum()
+
+        function returnValue(num1 ,  num2, num3){
+            let result=num1*num2*num3;
+            return result;
+        }
+        let returnValueResult = returnValue(5,10,5)
+        document.write(`this is returnValue function result : ${returnValurresult}<br>`);
+    </script>
+</body>
+</html>
