@@ -100,7 +100,7 @@
     border: 3px solid rgb(222, 64, 64);
 }
 
-.news{
+.news1{
     background-color: black;
     font-size: 30px;
     padding: 50px;
@@ -246,4 +246,265 @@
 
 .ti11 img{
     width: 100%;
+}
+
+.news{
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    padding: 0px 200px;
+    padding-bottom: 50px;
+}
+
+.news img{
+    width: 100%;
+    
+}
+
+.photo{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.img-card{
+    border: 1px solid white;
+   overflow: hidden;
+}
+
+.news img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+.teamslogo{
+    background-image: url(https://cdn.wallpapersafari.com/99/34/a739hI.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.teamslogo h1{
+    text-align: center;
+    font-size: 100px;
+    padding-top: 50px;
+}
+.teams{
+    
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px 300px;
+}
+
+.eg{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color:  rgba(222, 64, 64 , 0.5); */
+}
+
+.eg a{
+    text-decoration: none;
+}
+
+.eg1{
+    width: 70%;
+    padding: 20px; 
+}
+
+
+
+.secret{
+    width: 100%;
+    margin: 65px 0px;
+}
+
+.talon{
+    width: 100%;
+    margin: 63px 0px;
+}
+
+.boom{
+    width: 100%;
+    margin: 0px 0px;
+}
+
+.spirit{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.fnatic{
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.aster{
+    width: 100%;
+    margin: 25px 0px;
+}
+
+.tundra{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.rng{
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.liquid{
+    width: 100%;
+    margin: 15px 0px;
+}
+
+.lgd{
+    width: 100%;
+    margin: 35px 0px;
+}
+
+.hokori{
+    width: 100%;
+    margin: 45px 0px;
+}
+
+.beastcoast{
+    width: 80%;
+    margin: 50px 0px;
+}
+
+.entity{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.soniqs{
+    width: 100%;
+    margin: 63px 0px;
+}
+
+.bb{
+    width: 100%;
+    margin: 70px 0px;
+}
+
+.ta{
+    width: 100%;
+    margin: 42px 0px;
+}
+
+.og{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.gg{
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.tsm{
+    width: 100%;
+    margin: 55px 0px;
+}
+
+.line{
+    width: 70%;
+    margin: auto;
+}
+
+.line1{
+    width: 20%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.eg:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+
+.tour{
+    /* background-color: black; */
+    background-image: url(ti7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 750px;
+}
+
+.tour h1{
+    text-align: center;
+    color: rgb(250, 245, 247);
+    padding-top: 400px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    text-shadow: 2px 3px 4px rgb(243, 0, 0);
+}
+
+.tour hr{
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.tour p{
+    padding-top: 30px;
+    width: 50%;
+    text-align: justify;
+    margin: auto;
+    font-size: 20px;
+    animation: leftin 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    text-shadow: 2px 3px 4px rgb(0, 61, 243);
+    
+}
+@keyframes leftin{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
+
+.tiwinners{
+    background-color: black;
+    padding-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 3px 4px 5px rgb(243, 0, 0);
+}
+
+.ti11_winner{
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 50px;
+}
+
+.ti11_winner img{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.ti11_winner img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+
+.ti11_winner iframe:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
 }
