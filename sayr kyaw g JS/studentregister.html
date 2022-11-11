@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My form</title>
+</head>
+<body>
+    <h1>Student  Register Form</h1>
+    <form name="myForm" action="">
+        name : <input type="text" name="name"><br>
+        age : <input type="number" name="age"><br>
+        city : <input type="text" name="city"><br>
+        <button type="button" onclick="showData()">Add Student</button>
+    </form>
+    <h2>Sudent List</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+        </thead>
+        <tbody id="myData">
+
+        </tbody>
+    </table>
+
+    <script>
+        let studentListArray = [];
+        function showData(){
+            let name = document.myForm.name.value;
+            let age = document.myForm.age.value;
+            let city = document.myForm.city.value;
+            //console.log(name,age,city);
+            
+            let  student={
+                studentName : name,
+                studentAge : age ,
+                studentCity : city
+            }
+
+            studentListArray.push(student)
+
+            console.log(studentListArray);
+
+            let data = '';
+            for(let i=0 ; i < studentListArray.length; i++){
+                let studentList = studentListArray[i];
+                data =  data+ `
+                            <tr>
+                                <td>${i+1}</td>
+                                <td>${studentList.studentName}</td>
+                                <td>${studentList.studentAge}</td>
+                                <td>${studentList.studentCity}</td>
+                            </tr>
+                            `;
+
+            }
+
+            document.getElementById('myData').innerHTML = data;
+        }
+
+        function sayHi(){
+            let ans= confirm("go to youtube?")
+            if (ans) {
+                document.location.href="https://www.youtube.com/"
+            }else{
+                document.location.href="https://www.google.com/"
+            }
+        }
+
+
+    </script>
+</body>
+</html>

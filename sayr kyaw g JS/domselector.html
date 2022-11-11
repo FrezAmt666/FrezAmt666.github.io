@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Selector</h1>
+    <p id="myId">ID selector</p>
+    <p class="myClass">Class 1 selector</p>
+    <!-- <p>Class 2 selector</p>
+    <p>Class 3 selector</p> -->
+    <p>Tag selector</p>
+    <p>Query selector</p>
+    <button onclick="show()">Click Me</button>
+
+    <script>
+        function show(){
+            let myId = document.getElementById('myId');
+            console.log(myId.innerHTML);
+            console.log(myId.innerText);
+
+            //class selector
+            let myClass = document.getElementsByClassName('myClass');
+            console.log(myClass);
+            //console.log(myClass[2].innerText);
+
+            let myTagname = document.getElementsByTagName('p');
+            console.log(myTagname[4].innerText);
+
+            let querySelector = document.querySelector('#myId');
+            console.log(querySelector);
+
+            let querySelectorClass = document.querySelector('.myClass');
+            console.log(querySelectorClass);
+
+            let querySelectorTag = document.querySelector('p');
+            console.log(querySelectorTag);
+
+            let querySelectorClassAll = document.querySelectorAll('.myClass');
+            console.log(querySelectorClassAll);
+
+            let heading= document.getElementById('heading');
+            heading.innerHTML = "DOM Selector Lession <i>Update</i>";
+        }
+    </script>
+</body>
+</html>
