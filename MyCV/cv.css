@@ -30,7 +30,7 @@
     margin: 10px;
 }
 .about{
-    font-family: 'Abril Fatface', cursive;
+    font-family:'Times New Roman', Times, serif;
 }
 .line{
     width: 130px;
@@ -45,4 +45,8 @@
 
 .skill img{
     margin: 20px;
+}
+
+.social{
+    
 }
