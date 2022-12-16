@@ -7,10 +7,11 @@
     <title>IT Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/39be6963f6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <script src="/jQuery/jquery.min.js"></script>
+    
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         
@@ -22,7 +23,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a href="" class="nav-link text-success">Home</a></li>
                 <li class="nav-item"><a href="" class="nav-link text-success">Shop</a></li>
-                <li class="nav-item"><a href="" class="nav-link text-success">Cart</a></li>
+                <li class="nav-item"><a href="checkout.html" class="nav-link text-success"><i class="fa-solid fa-cart-shopping fa-2x"></i><span id="count_number"></span></a></li>
                 
             </ul>
         </div>
@@ -30,6 +31,7 @@
 
     <div class="container">
         <h1 class="text-dark text-center pt-5">Latest Products</h1>
+        
         <hr style="margin: auto; width:200px;" class="p-1">
         <div class="row pt-3">
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -37,7 +39,7 @@
                     <img src="https://media.steelseriescdn.com/thumbs/catalogue/products/00981-rival-650-wireless/a0fdbba64b844bce8bdf77c801ada302.png.350x280_q100_crop-fit_optimize.png" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">SteelSeries Mouse (Rival 650)</p>
                     <p class="card-text text-center ">$54.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="1" data-name="mouse1" data-price="54.99">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -45,7 +47,7 @@
                     <img src="https://media.steelseriescdn.com/thumbs/catalogue/products/01159-rival-3/480cb112a0c54bc39df42ab335424da3.png.350x280_q100_crop-fit_optimize.png" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">SteelSeries Mouse (Rival 3)</p>
                     <p class="card-text text-center ">$35.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="2" data-name="mouse2" data-price="35.99" >Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -53,7 +55,7 @@
                     <img src="https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-mouse/promouse-gallery-1.png?v=1" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Logictech Mouse</p>
                     <p class="card-text text-center ">$35</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="3" data-name="mouse3" data-price="35">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
                     <img src="https://dlcdnwebimgs.asus.com/gain/C349B9BC-466C-4DCB-A032-0BBB88CF5C8D/w1000/h732" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">ROG Strix G15</p>
                     <p class="card-text text-center ">$1299</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="4" data-name="laptop1" data-price="1299">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -76,7 +78,7 @@
                     <img src="https://www.notebookcheck.net/fileadmin/Notebooks/MSI/special/BTS_2022/MSI_NB_GF63_photo_03.png" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">MSI Gaming Laptop (NB 9S7-16R612-054)</p>
                     <p class="card-text text-center ">$1599</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="5" data-name="laptop2" data-price="1599">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -84,7 +86,7 @@
                     <img src="https://www.nicepng.com/png/detail/306-3062324_the-new-razer-blade-15-dual-storage-edition.png" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Razor Blade 15</p>
                     <p class="card-text text-center ">$1399</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="6" data-name="laptop3" data-price="1399">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -99,7 +101,7 @@
                     <img src="https://i.pinimg.com/originals/54/51/0a/54510a1932d63744bacb4fde1490dbdf.png" style="height: 360px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Gaming Headphone</p>
                     <p class="card-text text-center ">$60</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="7" data-name="headphone1" data-price="60">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -107,7 +109,7 @@
                     <img src="https://cdn.shopify.com/s/files/1/0112/1203/0016/products/k9catears_5.png?v=1644802415" style="height: 360px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Gaming Headphone</p>
                     <p class="card-text text-center ">$32.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="8" data-name="headphone2" data-price="32.99">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -115,7 +117,7 @@
                     <img src="https://i5.walmartimages.com/asr/3df5de14-0976-424d-8fe2-f80c2b5cbe4f.d9b65caac242e5193e8d1dbf4911a513.jpeg" style="height: 360px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Gaming Headphone</p>
                     <p class="card-text text-center ">$48.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="9" data-name="headphone3" data-price="48.99">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -130,7 +132,7 @@
                     <img src="https://www.pngmart.com/files/1/Logitech-Gaming-Keyboard-PNG.png" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Mechanical Keyboard</p>
                     <p class="card-text text-center ">$144.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="10" data-name="keyboard1" data-price="144.99">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -138,7 +140,7 @@
                     <img src="https://freepngimg.com/save/163126-gaming-neon-keyboard-png-image-high-quality/1217x598" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Mechanical Keyboard</p>
                     <p class="card-text text-center ">$135.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="11" data-name="keyboard2" data-price="135.99">Add to cart</button>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-sm-6 col-12 my-3">
@@ -146,7 +148,7 @@
                     <img src="https://m.media-amazon.com/images/I/41SeOQ0WNYL._AC_.jpg" style="height: 300px;" class="card-img-top " alt="">
                     <p class="card-text text-center pt-2">Mechanical Keyboard</p>
                     <p class="card-text text-center ">$99.99</p>
-                    <button class="btn btn-outline-success w-50 m-auto mb-3">Add to cart</button>
+                    <button class="btn btn-outline-success w-50 m-auto mb-3 addtocart" data-id="12" data-name="keyboard3" data-price="99.99">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -164,8 +166,81 @@
         </div>
     </footer>
 
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            count();
+            $('.addtocart').click(function(e)  {
+                e.preventDefault();
+
+                let id=$(this).data('id');
+                let name=$(this).data('name');
+                let price=$(this).data('price');
+                console.log(id,name,price);
+                
+
+                let items = {
+                    item_id : id,
+                    item_name : name,
+                    item_price : price,
+                    qty : 1,
+
+                }
+
+                let itemString  =localStorage.getItem('shops')
+                let itemArray;
+                if(itemString == null){
+                    itemArray = [];
+
+                }else{
+                    itemArray = JSON.parse(itemString);
+                }
+
+                let status = false;
+
+                $.each(itemArray,  function(i,v){
+                    if(id == v.item_id){
+                        status = true;
+                        v.qty++;
+                    }
+                })
+
+                if(status == false){
+                    itemArray.push(items);
+                }
 
 
+                
+                let itemData = JSON.stringify(itemArray);
+
+                localStorage.setItem('shops', itemData);
+                count();
+            });
+
+            function count(){
+                let itemString = localStorage.getItem('shops');
+                if(itemString){
+                    let itemArray = JSON.parse(itemString);
+                    
+                if(itemArray != 0){
+    
+                    
+                    //let count = itemArray.length;
+                    let count = 0;
+                    $.each(itemArray, function(i , v){
+                        count += v.qty;
+                    })
+                    $('#count_number').text(count);
+                }
+                }
+            }
+
+
+        });
+
+        
+
+    </script>
 
 
 </body>
