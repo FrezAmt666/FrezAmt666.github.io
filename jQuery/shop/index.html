@@ -21,8 +21,8 @@
         </button>
         <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="" class="nav-link text-success">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link text-success">Shop</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link text-success">Home</a></li>
+                <!-- <li class="nav-item"><a href="checkout.html" class="nav-link text-success">Shop</a></li> -->
                 <li class="nav-item"><a href="checkout.html" class="nav-link text-success"><i class="fa-solid fa-cart-shopping fa-2x"></i><span id="count_number"></span></a></li>
                 
             </ul>
@@ -167,6 +167,7 @@
     </footer>
 
     <script src="../jquery.min.js"></script>
+    <script src="count.js"></script>
     <script>
         $(document).ready(function(){
             count();
@@ -217,23 +218,7 @@
                 count();
             });
 
-            function count(){
-                let itemString = localStorage.getItem('shops');
-                if(itemString){
-                    let itemArray = JSON.parse(itemString);
-                    
-                if(itemArray != 0){
-    
-                    
-                    //let count = itemArray.length;
-                    let count = 0;
-                    $.each(itemArray, function(i , v){
-                        count += v.qty;
-                    })
-                    $('#count_number').text(count);
-                }
-                }
-            }
+            
 
 
         });

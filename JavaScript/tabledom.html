@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <style>
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            margin: 10px auto;
+        }
+        .btn{
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        .btn button{
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            box-shadow: 2px 3px 4px rgb(53, 53, 53);
+            cursor: pointer;
+        }
+        form{
+            background-color: rgb(255, 85, 85);
+            color: white;
+            padding: 30px;
+            width: 20%;
+            border-radius: 20px;
+        }
+        input{
+            width: 200px;
+        }
+        table{
+            border-collapse: collapse;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            width: 24%;
+        }
+        tbody tr td{
+            background-color: rgb(34, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Result Form</h1>
+    <form action="" name="myForm">
+        <div class="row">
+            <div class="col">
+                Name :
+            </div>
+            <div class="col">
+                <input type="text" name="name" id="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Myanmar :
+            </div>
+            <div class="col">
+                <input type="number" name="myanmar" id="myanmar">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                English :
+            </div>
+            <div class="col">
+                <input type="number" name="english" id="english">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Math :
+            </div>
+            <div class="col">
+                <input type="number" name="math" id="math">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Physics :
+            </div>
+            <div class="col">
+                <input type="number" name="physics" id="physics">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Chemistry :
+            </div>
+            <div class="col">
+                <input type="number" name="chemistry" id="chemistry">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Bio :
+            </div>
+            <div class="col">
+                <input type="number" name="bio" id="bio">
+            </div>
+        </div>
+        <div class="btn">
+            <button type="button" onclick="showData()">ADD RECORD</button>
+        </div>
+    </form>
+    <h2>Result List</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Myanmar</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Bio</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tbody id="myData">
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Grand Total </td>
+                <td id="grand"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+        let expenseArrayList = [];
+        function showData(){
+            //alert('ok')
+            //get Data
+            let name = document.myForm.name.value;
+            let myanmar =parseInt(document.myForm.myanmar.value); 
+            let english =parseInt( document.myForm.english.value);
+            let math =parseInt( document.myForm.math.value);
+            let physics =parseInt( document.myForm.physics.value);
+            let chemistry =parseInt( document.myForm.chemistry.value);
+            let bio =parseInt( document.myForm.bio.value);
+            let total = myanmar+english+math+physics+chemistry+bio;
+            //console.log(name);
+            //console.log(myanmar);
+            //console.log(total);
+
+            //add to array
+            let expense = {
+                expenseName : name,
+                expenseMyanmar : myanmar,
+                expenseEnglish : english,
+                expenseMath : math,
+                expensePhysics : physics,
+                expenseChemistry : chemistry,
+                expenseBio : bio,
+                expenseTotal : total
+            }
+            //console.log(expense);
+            expenseArrayList.push(expense)
+            console.log(expenseArrayList)
+            let data = '';
+            let grand = 0;
+        for(let i = 0; i < expenseArrayList.length; i++){
+            let expenseList = expenseArrayList[i];
+            data = data + `
+            <tr>
+                <td>${i+1}</td>
+                <td>${expenseList.expenseName}</td>
+                <td>${expenseList.expenseMyanmar}</td>
+                <td>${expenseList.expenseEnglish}</td>
+                <td>${expenseList.expenseMath}</td>
+                <td>${expenseList.expensePhysics}</td>
+                <td>${expenseList.expenseChemistry}</td>
+                <td>${expenseList.expenseBio}</td>
+                <td>${expenseList.expenseTotal}</td>
+            </tr>
+            `;
+            let myanmar = expenseList.expenseMyanmar;
+            let english = expenseList.expenseEnglish;
+            let math = expenseList.expenseMath;
+            let physics = expenseList.expensePhysics;
+            let chemistry = expenseList.expenseChemistry;
+            let bio = expenseList.expenseBio;
+
+            
+            
+        }
+        
+        document.getElementById('myData').innerHTML = data;
+        }
+
+
+    </script>
+</body>
+</html>

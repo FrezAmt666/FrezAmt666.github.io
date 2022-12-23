@@ -11,9 +11,25 @@
 </head>
 <body>  
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+          
+      <a href="" class="navbar-brand text-success mx-5 me-auto">IT Shop</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link text-success" >Home</a></li>
+              <!-- <li class="nav-item"><a href="checkout.html" class="nav-link text-success">Shop</a></li> -->
+              <li class="nav-item"><a href="checkout.html" class="nav-link text-success"><i class="fa-solid fa-cart-shopping fa-2x"></i><span id="count_number"></span></a></li>
+              
+          </ul>
+      </div>
+  </nav>
+
     <h3 class="text-center p-5">CHECKOUT</h3>
-    <table class="table">
-        <thead class="text-center">
+    <table class="table ">
+        <thead class="text-center  bg-secondary text-light">
           <tr>
             <th scope="col">No</th>
             <th scope="col">Item Name</th>
@@ -22,107 +38,106 @@
             <th scope="col">Sub Total</th>
           </tr>
         </thead>
-        <tbody class="text-center">
-          <tr>
-            <th scope="row">1</th>
-            <td>SteelSeries Mouse (Rival 650)</td>
-            <td>$54.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>SteelSeries Mouse (Rival 3)</td>
-            <td>$35.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Logictech Mouse</td>
-            <td>$35</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>ROG Strix G15</td>
-            <td>$1299</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>MSI Gaming Laptop</td>
-            <td>$1599</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Razor Blade 15</td>
-            <td>$1399</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>Gaming Headphone1</td>
-            <td>$60</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Gaming Headphone2</td>
-            <td>$32.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button> <span> 1 </span><button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>Gaming Headphone3</td>
-            <td>48.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button><span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>Mechanical Keyboard1</td>
-            <td>$144.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button><span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">11</th>
-            <td>Mechanical Keyboard2</td>
-            <td>$135.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button><span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">12</th>
-            <td>Mechanical Keyboard3</td>
-            <td>$99.99</td>
-            <td><button class="btn btn-outline-secondary m-auto ">+</button><span> 1 </span> <button class="btn btn-outline-secondary m-auto ">-</button></td>
-            <td></td>
-          </tr>
-          <tr>
-            <!-- <th scope="row">3</th> -->
-            <td class="text-center" colspan="4">Total</td>
-            <td></td>
-          </tr>
+        <tbody id="data_body" class="text-center bg-light">
+          
         </tbody>
       </table>
-      <button class="btn btn-outline-primary px-5  mx-5 my-5 " >Order Here!!!</button>
+      <button class="btn btn-outline-primary px-5  mx-5 my-5 " id="order">Order Here!!!</button>
 
 
 
 
     <script src="../jquery.min.js"></script>
+    <script src="count.js"></script>
     <script>
 
+      $(document).ready(function(){
+        count();
+        getData();
+        function getData(){
+        let itemStr = localStorage.getItem("shops");
+        console.log(itemStr);
+        if(itemStr){
+          let itemArr = JSON.parse(itemStr);
+          let data = '';
+          let j = 1;
+          let total =0;
 
+          $.each(itemArr, function(i,v){
+            data += `<tr>
+              <td>${j++}</td>
+              <td>${v.item_name}</td>
+              <td>${v.item_price}</td>
+              <td><button class="btn btn-sm btn-outline-success min" data-item_i="${i}" > - </button> ${v.qty} <button class="btn btn-sm btn-outline-success max" data-item_i="${i}" > + </button></td>
+              <td>${v.item_price * v.qty}</td>
+            </tr>`
+            total += v.item_price * v.qty;
+
+
+          });
+          data += `<td colspan="4">Total</td>
+          <td>${total}</td?
+          `
+          $('#data_body').html(data);
+        }else{
+          let data= "";
+          $('#data_body').html(data);
+        }
+      }
+        $("#data_body").on('click' , '.min' , function(){
+
+          let item_i = $(this).data('item_i');
+          let itemStr = localStorage.getItem('shops');
+          if(itemStr){
+            let itemArr= JSON.parse(itemStr);
+
+            $.each(itemArr, function (i,v){
+              if(item_i == i){
+                v.qty--;
+                if(v.qty == 0){
+                  itemArr.splice(item_i,1);
+                }
+
+              }
+            });
+
+            let itemData = JSON.stringify(itemArr);
+            localStorage.setItem('shops' , itemData);
+            getData();
+            count();
+          }
+
+        });
+
+        $("#data_body").on('click' , '.max' , function(){
+          let item_i = $(this).data('item_i');
+          let itemStr = localStorage.getItem('shops');
+          if(itemStr){
+            let itemArr= JSON.parse(itemStr);
+
+            $.each(itemArr, function (i,v){
+              if(item_i == i){
+                v.qty++;
+                
+              }
+            });
+
+            let itemData = JSON.stringify(itemArr);
+            localStorage.setItem('shops' , itemData);
+            getData();
+            count();
+          }
+
+        });
+
+        $('#order').click(function(e){
+          e.preventDefault();
+          localStorage.clear();
+          getData();
+          count();
+        });
+
+      });
 
     </script>
 </body>

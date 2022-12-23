@@ -1,0 +1,71 @@
+.carousel_text{
+    position: absolute;
+    top: 140px;
+    left: 150px;
+    width: 500px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    
+}
+
+.line{
+    border: 2px solid #0D6EFC;
+}
+
+.underline1{
+    display: inline-block;
+    width: 50%;
+    border: 2px solid red;
+}
+
+.underline2{
+    display: inline-block;
+    width: 50%;
+    border: 2px solid rgb(0, 34, 255);
+}
+.new_arrival_img{
+    position: relative;
+}
+
+.arrival-btn{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    display: none;
+}
+.new_arrival_img:hover .arrival-btn{
+    display: block;
+}
+.new_arrival_img:hover .new_img{
+    opacity: 0.7;
+}
+
+.img-cover{
+    overflow: hidden;
+}
+.zoom:hover{
+    transform: scale(1.5);
+    transition-duration: .6s;
+}
+
+.login{
+    
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d6efd;
+
+}
+
