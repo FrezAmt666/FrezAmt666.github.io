@@ -12,7 +12,7 @@
 }
 
 .link:hover{
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     background-color: white;
     color: #DC3545;
     padding: 5px 10px;
@@ -22,7 +22,7 @@
 }
 
 .link:focus{
-    letter-spacing: 5px;
+    /* letter-spacing: 5px; */
     background-color: white;
     color: #DC3545;
     padding: 5px 10px;
@@ -60,6 +60,37 @@
 
 .checked{
     color:orange;
+}
+
+.contact2{
+    border-radius: 5000px 30px;
+    box-shadow: 4px 5px 6px rgb(82, 73, 73);
+    
+}
+
+.line2{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    
+}
+
+
+.reveal{
+    position: relative;
+    /* transform: scale(0); */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    /* transform: scale(1); */
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#avaliable{
+    overflow: hidden;
 }
 
 

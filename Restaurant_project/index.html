@@ -15,7 +15,7 @@
 <body>
 
     <!-- nav start-->
-    <nav  class="navbar nav-bg navbar-expand-sm bg-danger  sticky-top navbar-dark">
+    <nav  class="container-fluid navbar nav-bg navbar-expand-sm bg-danger  sticky-top navbar-dark">
         <div class="container">
           <img class="logo" width="60px" src="./img/taste1.png" alt="">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -24,22 +24,23 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="link" href="#">HOME</a>
+                <a class="link" href="index.html">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="link" href="#">ABOUT</a>
+                <a class="link" href="about.html">ABOUT</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   FOODS
+                <a class="link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   FOODS & DRINKS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Local Foods</a></li>
-                  <li><a class="dropdown-item" href="#">Asian Foods</a></li>
-                  <li><a class="dropdown-item" href="#">European Foods</a></li>
+                  <li><a class="dropdown-item" href="#localfood">Local Foods</a></li>
+                  <li><a class="dropdown-item" href="#asianfood">Asian Foods</a></li>
+                  <li><a class="dropdown-item" href="#europeanfood">European Foods</a></li>
+                  <li><a class="dropdown-item" href="#drinks">Drinks</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a class="link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                    DRINKS
                 </a>
@@ -48,17 +49,18 @@
                   <li><a class="dropdown-item" href="#">Beer</a></li>
                   <li><a class="dropdown-item" href="#">Alcohol</a></li>
                 </ul>
-              </li>
+              </li> -->
               
               <li class="nav-item">
-                <a class="link" href="#">PROMOTIONS</a>
+                <a class="link" href="promotion.html">PROMOTIONS</a>
               </li>
               <li class="nav-item">
-                <a class="link" href="#">CONTACT</a>
+                <a class="link" href="contact.html">CONTACT</a>
               </li>
               <li class="nav-item">
-                <a class="link" href="#"><i class="fa-solid fa-cart-shopping "></i></a>
+                <a class="link" href="addtocart.html" ><i class="fa-solid fa-cart-shopping "></i><span   id="count_number"></span></a>
               </li>
+              <!-- <li class="nav-item"><a href="checkout.html" class="nav-link text-success"><i class="fa-solid fa-cart-shopping fa-2x"></i><spanc></span></a></li> -->
             </ul>
           </div>
         </div>
@@ -111,7 +113,8 @@
         </button>
       </div>
 
-      <div class="container my-5">
+      <!-- avaliable food -->
+      <div class="container my-5" id="avaliable">
         <h3 class="text-center">Avaliable Foods</h3>
         <hr class="line pt-0 mt-0 m-auto" width="150px">
         <div class="responsive my-5">
@@ -126,20 +129,19 @@
           </div>
           <div class="mx-2">
             <img src="./img/s4.jpg" class="w-100" alt="">
-          </div><div class="mx-2">
+          </div>
+          <div class="mx-2">
             <img src="./img/s5.jpg" class="w-100" alt="">
           </div>
-            
-            
         </div>
     </div>
       
-
+    <!-- menu -->
     <div class="container my-5">
       <h3 class="text-center ">Order Now!</h3>
       <hr class="line pt-0 mt-0 m-auto" width="100px">
       <div class="row py-5">
-        <div class="col-xl-3">
+        <div class="col-xl-3 reveal">
           <div class="list-group">
             <button class="list-group-item  choose" id="all">All Categories</button>
             <button class="list-group-item" id="local">Local Foods</button>
@@ -148,12 +150,12 @@
             <button class="list-group-item" id="drink">Drinks</button>
           </div>
         </div>
-        <div class="col-xl-9">
-          <div class="row mb-5 local">
-            <h4 class=""><span class="sideline me-2"></span> Local Foods</h4>
-            <div class="col-xl-3 col-md-4 col-6 ">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/htamin1.jpg" class="card-img-top" alt="">
+        <div class="col-xl-9 mt-4">
+          <div class="row mb-5 local ">
+            <h4 class="" id="localfood"><span class="sideline me-2"></span> Local Foods</h4>
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/htamin1.jpg"  class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>ထမင်း</h6>
                   <p>800 MMK</p>
@@ -162,99 +164,117 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="1" data-name="ထမင်း" data-price="800"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local1.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>ဘဲသားဟင်း</h6>
-                  <p>3,000 MMK</p>
+                  <p>4,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="2" data-name="ဘဲသားဟင်း" data-price="4000"><i class="fa-solid fa-cart-plus"></i></button>
+
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local2.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local2.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>အမဲသားဟင်း</h6>
-                  <p>3,000 MMK</p>
+                  <p>4,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart "  data-id="3" data-name="အမဲသားဟင်း" data-price="4000"><i class="fa-solid fa-cart-plus"></i></button>
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local3.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local3.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>ဆိတ်သားဟင်:</h6>
-                  <p>3,000 MMK</p>
+                  <p>4,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="4" data-name="ဆိတ်သားဟင်" data-price="4000"><i class="fa-solid fa-cart-plus"></i></button>
+
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local4.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local4.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>ဝက်သားဟင်း</h6>
-                  <p>3,000 MMK</p>
+                  <p>4,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="5" data-name="ဝက်သားဟင်း" data-price="4000"><i class="fa-solid fa-cart-plus"></i></button>
+
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local5.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local  bel ou.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
-                  <h6>နန်းကြီးသုပ်</h6>
+                  <h6>ဘဲဥဟင်း</h6>
                   <p>2,500 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="6" data-name="ဘဲဥဟင်း" data-price="2500"><i class="fa-solid fa-cart-plus"></i></button>
+
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/local6.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/local6.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>ကြက်သားဟင်း</h6>
-                  <p>3,000 MMK</p>
+                  <p>4,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="7" data-name="ကြက်သားဟင်း" data-price="4000"><i class="fa-solid fa-cart-plus"></i></button>
+
+
                 </div>
               </a>
             </div>
           </div>
-          <div class="row mb-5 asian">
-            <h4 class=""><span class="sideline me-2"></span> Asian Foods</h4>
-            <div class="col-xl-3 col-md-4 col-6 ">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian1.jpg" class="card-img-top" alt="">
+          <div class="row mb-5 asian ">
+            <h4 class="" id="asianfood"><span class="sideline me-2"></span> Asian Foods</h4>
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6 ">
+              <a href=""  class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Bibimbap</h6>
                   <p>8,000 MMK</p>
@@ -263,26 +283,30 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="8"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
+                
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian2.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian2.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
-                  <h6>Korean Style Seafood</h6>
+                  <h6>Korean Seafood</h6>
                   <p>15,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="9" data-name="Korean Seafood" data-price="15000"><i class="fa-solid fa-cart-plus"></i></button>
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian3.jpg" class="card-img-top" alt="">
+                <img src="./img/asian3.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Grill Duck</h6>
                   <p>20,000 MMK</p>
@@ -291,12 +315,14 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="10" data-name="Grill Duck" data-price="20000"><i class="fa-solid fa-cart-plus"></i></button>
+
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian4.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian4.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Pork Ramen</h6>
                   <p>8,000 MMK</p>
@@ -305,12 +331,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="11" data-name="Pork Ramen" data-price="8000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian5.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian5.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Spicy Chicken</h6>
                   <p>12,000 MMK</p>
@@ -319,12 +346,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="12" data-name="Spicy Chicken" data-price="12000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian6.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian6.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Pork Salad</h6>
                   <p>17,500 MMK</p>
@@ -333,12 +361,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="13" data-name="Pork Salad" data-price="17500"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asain7.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asain7.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Grill Squid</h6>
                   <p>18,000 MMK</p>
@@ -347,12 +376,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="14" data-name="Grill Squid" data-price="18000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian8.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/asian8.jpg" class="card-img-top w-100"  alt="">
                 <div class="card-title p-2">
                   <h6>Shrimp Tempura</h6>
                   <p>10,000 MMK</p>
@@ -361,26 +391,28 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="15" data-name="Shrimp Tempura" data-price="10000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian9.jpg" class="card-img-top" alt="">
+                <img src="./img/asian9.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
-                  <h6>Japanese Chicken Curry </h6>
+                  <h6>Tonkatsu </h6>
                   <p>12,500 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="16"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian10.jpg" class="card-img-top" alt="">
+                <img src="./img/asian10.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Fried Noodle</h6>
                   <p>6,000 MMK</p>
@@ -389,12 +421,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="17"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian11.jpg" class="card-img-top" alt="">
+                <img src="./img/asian11.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>A Sein Kyaw</h6>
                   <p>7,000 MMK</p>
@@ -403,12 +436,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="18"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/asian12.jpg" class="card-img-top" alt="">
+                <img src="./img/asian12.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Dumpling</h6>
                   <p>7,000 MMK</p>
@@ -417,16 +451,17 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="19"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
             
           </div>
-          <div class="row mb-5 european">
-            <h4 class=""><span class="sideline me-2"></span> European Foods</h4>
-            <div class="col-xl-3 col-md-4 col-6 ">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe1.jpg" class="card-img-top" alt="">
+          <div class="row mb-5 european ">
+            <h4 class="" id="europeanfood"><span class="sideline me-2"></span> European Foods</h4>
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6 ">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/europe1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Baked Fish</h6>
                   <p>10,000 MMK</p>
@@ -435,12 +470,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="20" data-name="Baked Fish" data-price="10000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe2.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/europe2.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Grill Fish</h6>
                   <p>15,000 MMK</p>
@@ -449,12 +485,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="21" data-name="Grill Fish" data-price="15000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe3.jpg" class="card-img-top" alt="">
+                <img src="./img/europe3.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Sar Tay</h6>
                   <p>9,000 MMK</p>
@@ -463,26 +500,28 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="22"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe4.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/europe4.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
-                  <h6>GrillChicken</h6>
+                  <h6>Grill Chicken</h6>
                   <p>13,000 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="23" data-name="Grill Chicken" data-price="13000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe5.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/europe5.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Pancake</h6>
                   <p>6,000 MMK</p>
@@ -491,26 +530,28 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="24" data-name="Pancake" data-price="6000"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe6.jpg" class="card-img-top" alt="">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/europe6.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
-                  <h6>Frech Fries</h6>
+                  <h6>French Fries</h6>
                   <p>4,500 MMK</p>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="25" data-name="French Fries" data-price="4500"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe7.jpg" class="card-img-top" alt="">
+                <img src="./img/europe7.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Steak</h6>
                   <p>20,000 MMK</p>
@@ -519,12 +560,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="26"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe8.jpg" class="card-img-top" alt="">
+                <img src="./img/europe8.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Pizza</h6>
                   <p>28,000 MMK</p>
@@ -533,12 +575,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="27"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe9.jpg" class="card-img-top" alt="">
+                <img src="./img/europe9.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Spaghetti</h6>
                   <p>13,500 MMK</p>
@@ -547,12 +590,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="28"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/europe10.jpg" class="card-img-top" alt="">
+                <img src="./img/europe10.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Pasta</h6>
                   <p>12,000 MMK</p>
@@ -561,15 +605,16 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="29"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
           </div>
-          <div class="row mb-5 drink">
-            <h4 class=""><span class="sideline me-2"></span> Drinks</h4>
-            <div class="col-xl-3 col-md-4 col-6 ">
-              <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/water1.jpg" class="card-img-top" alt="">
+          <div class="row mb-5 drink ">
+            <h4 class="" id="drinks"><span class="sideline me-2"></span> Drinks</h4>
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6 ">
+              <a href="addtocart.html" class="card text-decoration-none text-dark my-3 shadow">
+                <img src="./img/water1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Water</h6>
                   <p>700 MMK</p>
@@ -578,12 +623,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end addtocart"  data-id="30" data-name="Water" data-price="700"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/fanta1.jpg" class="card-img-top" alt="">
+                <img src="./img/fanta1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Fanta</h6>
                   <p>1,600 MMK</p>
@@ -592,12 +638,13 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="31"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/beer1.jpg" class="card-img-top" alt="">
+                <img src="./img/beer1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Beer</h6>
                   <p>Unstable Price</p>
@@ -606,13 +653,14 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end"  data-id="32"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
             
-            <div class="col-xl-3 col-md-4 col-6">
+            <div class="col-xl-3 col-md-4 col-6 col-sm-6">
               <a href="" class="card text-decoration-none text-dark my-3 shadow">
-                <img src="./img/alcohol1.jpg" class="card-img-top" alt="">
+                <img src="./img/alcohol1.jpg" class="card-img-top w-100" alt="">
                 <div class="card-title p-2">
                   <h6>Alcohol</h6>
                   <p>Unstable Price</p>
@@ -621,6 +669,7 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
+                  <button class="btn btn-sm btn-success float-end" data-id="33"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
               </a>
             </div>
@@ -642,7 +691,7 @@
 
 
       <!-- Footer -->
-    <footer class="text-center text-lg-start bg-danger text-white">
+    <footer class="container-fluid text-center  text-lg-start bg-danger text-white">
         <!-- Section: Social media -->
         
         <!-- Section: Social media -->
@@ -739,4 +788,27 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+
+    
+    <script>
+      function reveal() {
+          var reveals = document.querySelectorAll(".reveal");
+        
+          for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+        
+            if (elementTop < windowHeight - elementVisible) {
+              reveals[i].classList.add("active");
+            } else {
+              reveals[i].classList.remove("active");
+            }
+          }
+
+         
+      }
+        
+        window.addEventListener("scroll", reveal);
+  </script>
 </html>
