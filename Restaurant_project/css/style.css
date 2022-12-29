@@ -93,5 +93,28 @@
     overflow: hidden;
 }
 
+.select{
+    color: #fcfcfc;
+    background-color:#497782;
+}
 
+#count_number{
+    position: relative;
+    top: -8px;
+    left: 3px;
+   
+
+}
+
+.pizza{
+    color: #fcfcfc;
+    background-color:#198754;
+    position: relative;
+}
+
+.cart{
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+}
 
