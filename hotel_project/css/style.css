@@ -1,0 +1,145 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.link{
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.link:hover{
+    letter-spacing: 5px;
+    background-color: white;
+    color:  #032D30;
+    padding: 5px 10px;
+    border-radius: 10px ;
+    transition-duration: .6s;
+
+}
+
+.link:focus{
+    letter-spacing: 5px;
+    background-color: white;
+    color:  #032D30;
+    padding: 5px 10px;
+    border-radius: 10px ;
+    transition-duration: .6s;
+
+}
+
+
+
+.text{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    width: 500px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    
+}
+
+.sideline{
+    background-color:#D8AD5D;
+    padding: 1px 2px;
+    border-radius: 5px;
+}
+.cards img:hover{
+    transform: scale(1.3);
+    transition-duration: .6s;
+}
+
+.image{
+    overflow: hidden;
+}
+
+.images:hover{
+    transform: scale(0.8);
+    transition-duration: .6s;
+    /* opacity: 0.7; */
+    
+}
+
+.serv img:hover{
+  transform: scale(1.3);
+  transition-duration: .6s;
+  
+}
+
+.serv{
+  overflow: hidden;
+}
+
+
+
+.choose{
+  background-color:  #D8AD5D;
+  color: white;
+}
+
+#avaliable{
+  overflow: hidden;
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:10vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+    
+  }
+
+.selector{
+    border: none;
+  }
+
+  /* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
+
