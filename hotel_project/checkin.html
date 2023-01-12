@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
     <link rel="stylesheet" href="./css/slick_theme.css">
     <link rel="icon" href="./img/Ananta Bagan.png">
     <link rel="stylesheet" href="./css/animate.css">
-    <title>ABOUT</title>
+    <title>BOOKING</title>
     
 </head>
 <body>
@@ -54,19 +56,137 @@
       </nav>
       <!-- nav end -->
 
+      <div style="margin-top:100px;" id="booking" class="container">
+        <h1 class="my-3 px-2" style="color:#D8AD5D;"><span class="sideline me-2"></span>PLAN YOUR STAY</h1>
 
-      <div class="container">
-      <h1 class="mt-5 pb-3" style="color: #D8AD5D;"><span class="sideline me-2"></span>ABOUT US</h1>
-
-        <div class="row py-3">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <img src="./img/about2.jpg" class="w-100 img-fluid rounded" alt="">
-          </div>
-          <div class="col m-auto" style="font-size:23px; color:#032D30">
-            Our ANANTA BAGAN HOTEL has been open since 2016. Our ANANTA BAGAN Hotel is located near Tharabar Gate. Our hotel is built with modern equipment and luxury. Swimming pool, Spa, Gym, Basketball Court, Tennis Court and High Speed ​​Wifi. The fire pit is always kept clean to bring health and harmony to those who come to the hotel.The chefs are appointed by world-class chefs. The staff are patient and respectful towards the guests. Our hotel always provides you with excellent services. You are guaranteed to be satisfied.
-          </div>
+        <div class="container  p-3 px-5 goldText rounded shadow-lg" style="background-color: #032D30;">
+            <p id="book-detail"></p>
+            <!-- <div class="text-end">
+                <button class="btn goldText" id="editform">Edit Selection</button>
+                <button class="btn goldText" id="hideform">Hide</button>
+            </div> -->
+            
+            <form action="checkin.html" id="booking-form">
+                <div class="row">
+                    <div class="col-12 col-lg-3 my-3">
+                        <div>
+                            <label class="form-label" for="checkIn">CHECK IN</label>
+                        </div>
+                        <div>
+                            <input class="form-control" type="date" name="checkIn" id="checkIn" value="2023-01-01">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 my-3">
+                        <div>
+                            <label class="form-label" for="checkOut">CHECK OUT</label>
+                        </div>
+                        <div>
+                            <input class="form-control" type="date" name="checkOut" id="checkOut" value="2023-01-01">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-12 my-3">
+                        
+                        <div class="booking-form__input guests-input">
+                            <label for="guests-input-btn" class="form-label">ROOMS</label>
+                            <button name="guests-btn" id="guests-input-btn" class="btnopt">1 guest</button>
+                            <div class="guests-input__options" id="guests-input-options">
+                                <div>
+                                    <span class="guests-input__ctrl minus" id="adults-subs-btn">-</span><!-- /.guests-input__ctrl -->
+                                    <span class="guests-input__value"><span id="guests-count-adults">1</span>Adults</span><!-- /.guests-input__value -->
+                                    <span class="guests-input__ctrl plus" id="adults-add-btn">+</span><!-- /.guests-input__ctrl -->
+                                </div>
+                                <div>
+                                    <span class="guests-input__ctrl minus" id="children-subs-btn">-</span><!-- /.guests-input__ctrl -->
+                                    <span class="guests-input__value"><span id="guests-count-children">0</span>Children</span><!-- /.guests-input__value -->
+                                    <span class="guests-input__ctrl plus" id="children-add-btn">+</span><!-- /.guests-input__ctrl -->
+                                </div>
+                            </div><!-- /.guests-input__options -->
+                        </div><!-- /.booking-form__input -->
+                    </div>
+                    <div class="col-lg-3 col-12">
+                        <button class="btn btn-gold my-5 w-100">BOOK NOW</button>
+                    </div>
+                </div>
+            </form>
         </div>
-      </div>
+    </div>
+      
+    <div class="container">
+        <h1 class="my-5 px-2" style="color:#D8AD5D;"><span class="sideline me-2"></span>CHECK IN HERE</h1>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="form-floating mt-3 mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+                    <label for="name">First Name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+                        <label for="name">Last Name</label>
+                        </div>
+                </div>    
+            </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="form-floating mt-3 mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                    <label for="email">Email Address</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="number" placeholder="Enter your ph.no" name="number">
+                        <label for="ph.no">Contact Number</label>
+                        </div>
+                </div>
+            </div>
+        <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-floating pt-3 pb-3">
+                        <select class="form-select">
+                            <option>Visa Card</option>
+                            <option>Credit Card</option>
+                            <option>KBZ Pay</option>
+                            <option>AYA Pay</option>
+                          </select>
+                        
+                        </div>
+                    </div>
+                    <div class="col">
+                        
+                                <img src="./img/visa.png" class="img-fluid" alt="">
+                            
+                            
+                                <img src="./img/master.png" class="img-fluid" alt="">
+                            
+                           
+                                <img src="./img/kbz.png" class="img-fluid" alt="">
+                            
+                          
+                                <img src="./img/aya.png" class="img-fluid" alt="">
+                            
+                        </div>
+            </div>
+        <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-floating mt-3 mb-3">
+                                <input type="text" class="form-control" id="credit" placeholder="Enter your credit card" name="credit">
+                                <label for="text">Credit Card Number </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mt-3 mb-3">
+                                    <input type="text" class="form-control" id="number" placeholder="Enter your date" name="number">
+                                    <label for="date">Expiry Date (MM/YYYY)</label>
+                                    </div>
+                            </div>
+            </div>
+            <a href="checkin.html" class="btn btn-lg px-5 my-3" style="background-color: #D8AD5D; color:white">Confirm Booking</a>
+        </div>
+        
+   
+      
      
 
 
@@ -91,7 +211,7 @@
     <!-- subscribe start -->
       
 
-
+    
 
 
 
